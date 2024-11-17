@@ -1,0 +1,179 @@
+@font-face {
+  font-family: Regular;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Bold;
+  src: url(fonts/Roboto-Bold.ttf);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Tomato: hsl(4, 100%, 67%);
+  --Dark-Slate-Grey: hsl(234, 29%, 20%);
+  --Charcoal-Grey: hsl(235, 18%, 26%);
+  --Grey: hsl(231, 7%, 60%);
+  --White: hsl(0, 0%, 100%);
+  --orange: #fd634a;
+  --pink: #ff3e83;
+}
+
+body {
+  font-family: Regular;
+  background-color: var(--Charcoal-Grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card {
+  background-color: white;
+  border-radius: 40px;
+  display: flex;
+  padding: 1.5rem;
+  height: 35rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+.sign-up-content {
+  margin: 2rem;
+  max-width: 25rem;
+}
+
+.sign-up-text h1 {
+  font-size: 3.5rem;
+  font-family: Bold;
+  color: var(--Dark-Slate-Grey);
+  margin-bottom: 1rem;
+}
+
+.sign-up-text p,
+.sign-up-text ul {
+  margin-bottom: 2rem;
+}
+
+.sign-up-text li {
+  margin-bottom: 0.9rem;
+  display: flex;
+  list-style: none;
+}
+
+.sign-up-text li::before {
+  content: url(images/icon-success.svg);
+  margin-right: 1rem;
+}
+
+.email {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 35%;
+  width: 95%;
+  position: relative;
+}
+.email label {
+  font-family: Bold;
+  font-size: 0.9em;
+}
+
+.error {
+  margin-top: 10px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.9em;
+  font-family: Bold;
+  color: var(--Tomato);
+}
+
+.error-input {
+  border: 1px solid var(--Tomato);
+  color: tomato;
+}
+
+.email input {
+  padding: 0.9rem;
+  border-radius: 5px;
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--Dark-Slate-Grey);
+  color: white;
+  font-size: 1em;
+  font-family: Bold;
+  cursor: pointer;
+  transition: all ease 0.15s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(90deg, var(--pink), var(--orange));
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.card-success {
+  display: flex;
+  flex-direction: column;
+  width: 35em;
+  padding: 4rem 5rem;
+  height: 35em;
+}
+
+.card-success img {
+  width: 4rem;
+  margin-bottom: 2rem;
+}
+
+.card-success h1 {
+  font-size: 3.4rem;
+  color: var(--Dark-Slate-Grey);
+  font-family: Bold;
+  margin-bottom: 2rem;
+}
+
+.card-success p {
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  width: 28rem;
+}
+
+.submitted-email {
+  color: var(--Dark-Slate-Grey);
+  font-family: Bold;
+}
+
+.hidden {
+  display: none;
+}
+
+@media only screen and (max-width: 50em) {
+  .sign-up {
+    display: flex;
+    flex-direction: column-reverse;
+    min-height: 55rem;
+  }
+  .sign-up img {
+    object-fit: cover;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+  }
+}
